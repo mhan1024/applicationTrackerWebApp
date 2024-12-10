@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+
+    <!-- Style Sheet Connection -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Link to JavaScript code -->
+    <script src="./server.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Tab header -->
+        <div class="tab">
+            <!-- Home  -->
+            <a href="/"><input type="button" value="Home" id="homeTabButton"></a>
+
+            <!-- About -->
+            <a href="/about"><input type="button" value="About" id="idTabButton"></a>
+            
+            <!-- Add app -->
+            <a href="/addApplication"><input type="button" value="Add Application" id="addTabButton"></a>
+            
+            
+            <!-- Display app -->
+            <a href="/displayApplication"><input type="button" value="Display Application" id="displayTabButton"></a>
+
+            <!-- Search job -->
+            <a href="/search"><input type="button" value="Job Search" id="searchTabButton"></a>
+
+            <!-- Resources -->
+            <a href="/resources"><input type="button" value="Resources" id="resourcesTabButton"></a>
+            
+            <!-- Sign Out -->
+            <a href="/account"><input type="button" value="Sign out" id="accountTabButton"></a>
+        </div>
+    </header>
+
+    <div id="welcomeUserBox">
+        <h1>Welcome back <%- firstName %>!</h1>
+
+        <h4><%- joke %></h4>
+        <form action="http://localhost:5500/get-joke" method="post">
+            <input type="submit" value="New Joke">
+        <form>
+    </div>
+
+</body>
+
+</html>

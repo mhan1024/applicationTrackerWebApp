@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+
+    <!-- Style Sheet Connection -->
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <!-- Link to JavaScript code -->
+    <script src="./server.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <!-- Tab header -->
+        <div class="tab">
+            <!-- Home  -->
+            <a href="/"><input type="button" value="Home" id="homeTabButton"></a>
+
+            <!-- About -->
+            <a href="/about"><input type="button" value="About" id="idTabButton"></a>
+            
+            <!-- Add app -->
+            <a href="/addApplication"><input type="button" value="Add Application" id="addTabButton"></a>
+            
+            
+            <!-- Display app -->
+            <a href="/displayApplication"><input type="button" value="Display Application" id="displayTabButton"></a>
+
+            <!-- Search job -->
+            <a href="/search"><input type="button" value="Job Search" id="searchTabButton"></a>
+    
+            <!-- Resources -->
+            <a href="/resources"><input type="button" value="Resources" id="resourcesTabButton"></a>
+            
+            
+            <!-- Sign in -->
+            <a href="/account"><input type="button" value="Sign in" id="accountTabButton"></a>
+            
+        </div>
+    </header>
+
+    <div class="bodyContent">
+        <div id="welcomeBox">
+            <div id="welcomeInner">
+                <h1>Welcome!</h1>
+                <p>This is a web application that keeps track of your job or internship applications. For more information, please check out the <a href="/about">About</a> page. If you already have an account, please sign in. Otherwise, create an account by clicking on the button below.</p>
+                <br>
+                <!-- Create account -->
+                <a href="/createAccount"><input type="button" value="Create Account" id="createAccountButtonWelcome"></a>
+                <br><br>
+                <!-- Sign in -->
+                <a href="/account"><input type="button" value="Sign in" id="accountTabButtonWelcome"></a>
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+
+</html>

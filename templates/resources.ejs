@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resources</title>
+
+    <!-- Style Sheet Connection -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Link to JavaScript code -->
+    <script src="./server.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Tab header -->
+        <div class="tab">
+            <!-- Home  -->
+            <a href="/"><input type="button" value="Home" id="homeTabButton"></a>
+
+            <!-- About -->
+            <a href="/about"><input type="button" value="About" id="idTabButton"></a>
+            
+            <!-- Add app -->
+            <a href="/addApplication"><input type="button" value="Add Application" id="addTabButton"></a>
+            
+            
+            <!-- Display app -->
+            <a href="/displayApplication"><input type="button" value="Display Application" id="displayTabButton"></a>
+
+            <!-- Search job -->
+            <a href="/search"><input type="button" value="Job Search" id="searchTabButton"></a>
+
+            <!-- Resources -->
+            <a href="/resources"><input type="button" value="Resources" id="resourcesTabButton"></a>
+
+
+            <!-- TO DO LATER -->
+            <a href="/account"><%- signButton %></a>
+        </div>
+    </header>
+
+    <div id="resourcesBox">
+        <h1>Resources</h1>
+
+        <div id="resourcesGrid">
+            <div class="gridItem">
+                <a href="https://leetcode.com/"><img src="./leetcode.png" alt="leetcode" height="50px"></a>
+                <p>LeetCode</p><br>
+            </div>
+    
+            <div class="gridItem">
+                <a href="https://www.hackerrank.com/"><img src="./hackerrank.png" alt="hackerrank" height="50px"></a>
+                <p>HackerRank</p><br>
+            </div>
+    
+            <div class="gridItem">
+                <a href="https://www.geeksforgeeks.org/"><img src="./geeksforgeeks.png" alt="geeksforgeeks" height="50px"></a>
+                <p>GeeksforGeeks</p><br>
+            </div>
+    
+            <div class="gridItem">
+                <a href="https://www.w3schools.com/"><img src="./w3-schools.png" alt="w3schools" height="50px"></a>
+                <p>W3Schools</p>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+</body>
+
+</html>

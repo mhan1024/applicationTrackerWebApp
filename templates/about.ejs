@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About</title>
+
+    <!-- Style Sheet Connection -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Link to JavaScript code -->
+    <script src="./server.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Tab header -->
+        <div class="tab">
+            <!-- Home  -->
+            <a href="/"><input type="button" value="Home" id="homeTabButton"></a>
+
+            <!-- About -->
+            <a href="/about"><input type="button" value="About" id="idTabButton"></a>
+            
+            <!-- Add app -->
+            <a href="/addApplication"><input type="button" value="Add Application" id="addTabButton"></a>
+            
+            
+            <!-- Display app -->
+            <a href="/displayApplication"><input type="button" value="Display Application" id="displayTabButton"></a>
+
+            <!-- Search job -->
+            <a href="/search"><input type="button" value="Job Search" id="searchTabButton"></a>
+
+            <!-- Resources -->
+            <a href="/resources"><input type="button" value="Resources" id="resourcesTabButton"></a>
+            
+            
+            <!-- Sign in/out -->
+            <a href="/account"><%- signButton %></a>
+
+        </div>
+    </header>
+
+    <div id="aboutContent">
+        <div id="aboutUpper">
+            <h1>About AppTracker</h1>
+        </div>
+        
+        <div id="aboutLower">
+            <p>AppTracker is a web application that helps you keep track of your job or internship applications. In the <a href="/addApplication">Add Application</a> page, you can provide some basic information about the company that you just applied for and it will be added to a database. You can view or modify the status of your applications in the <a href="/displayApplication">Display Application</a> page. Additionally, you can display all your applications or monitor them according to a specific filter. Check out the <a href="/resources">Resources</a> page for links to job boards, interview prep, and additional fun stuff!</p>
+
+            <p>As a CS student, applying to internships and jobs hasn't been a smooth ride. During the fall semester of my junior year, I had applied to 100+ internships. All I had was the notes app on my phone to keep track of those applications. I could've used a spreadsheet, but that wasn't as convenient because I was constantly applying to internships whenever I had a few minutes to spare. After a while, it became a hassle to find the companies on my list whenever I had to update their status to either rejected or interview. Additionally, different companies had used websites similar to LeetCode for interview preparations and I would have to add them to my list to also keep track of that information. So this web application is my way to keep track of information and have it all in one place.</p>
+        </div>
+
+    </div>
+    
+
+</body>
+
+</html>

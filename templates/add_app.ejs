@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Add</title>
+
+    <!-- Style Sheet Connection -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Link to JavaScript code -->
+    <script src="./server.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Tab header -->
+        <div class="tab">
+            <!-- Home  -->
+            <a href="/"><input type="button" value="Home" id="homeTabButton"></a>
+
+            <!-- About -->
+            <a href="/about"><input type="button" value="About" id="idTabButton"></a>
+            
+            <!-- Add app -->
+            <a href="/addApplication"><input type="button" value="Add Application" id="addTabButton"></a>
+            
+            
+            <!-- Display app -->
+            <a href="/displayApplication"><input type="button" value="Display Application" id="displayTabButton"></a>
+
+            <!-- Search job -->
+            <a href="/search"><input type="button" value="Job Search" id="searchTabButton"></a>
+
+            <!-- Resources -->
+            <a href="/resources"><input type="button" value="Resources" id="resourcesTabButton"></a>
+
+            <!-- TO DO LATER -->
+            <a href="/account"><input type="button" value="Sign out" id="accountTabButton"></a>
+        </div>
+    </header>
+
+    <div id="addAppForm">
+        <form action="http://localhost:5500/addApplication" method="post">
+            <fieldset>
+                <h1>Add Application</h1>
+                <input type="text" id="companyName" name="companyName" placeholder="Company Name" required><br>
+                
+                <select id="jobType" name="jobType" required>
+                    <option value selected disabled hidden>Job Type</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option>
+                </select><br>
+
+                <input type="text" id="position" name="position" placeholder="Job Title" required><br>
+
+                <input type="number" id="salary" name="salary" step="0.25" min="0" placeholder="Pay" required><br>
+
+                <select id="location" name="location" required>
+                    <option value selected disabled hidden>Location</option>
+                    <option value="In-Person">In-Person</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Remote">Remote</option>
+                </select><br>
+
+                <input type="url" id="jobUrl" name="jobUrl" placeholder="URL"><br>
+
+                <label for="dateSubmitted">Date Submitted</label>
+                <input type="date" id="dateSubmitted" name="dateSubmitted"><br>
+
+                <div class="statusRadio">
+                    <label for="jobStatus">Status</label><br>
+                    <input type="radio" id="processing" name="jobStatus" value="Processing">
+                    <label for="processing">Processing</label>
+                    <input type="radio" id="interview" name="jobStatus" value="Interview">
+                    <label for="interview">Interview</label>
+                </div>
+                <br>
+                
+                <input type="text" id="extraInfo" name="extraInfo" placeholder="Additional Information"><br>
+
+                <input type="submit" value="Submit Form">
+                <br>
+                <input type="reset" value="Clear">
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="editAppForm">
+        <form action="http://localhost:5500/editApplication" method="post">
+            <fieldset>
+                <h1>Edit Application</h1>
+    
+                <select id="companyName" name="companyName" required>
+                    <option value selected disabled hidden>Company Name</option>
+                    <%- companiesLst %>
+                </select><br>
+    
+                <select id="jobType" name="jobType">
+                    <option value selected disabled hidden>Job Type</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option>
+                </select><br>
+    
+                <input type="text" id="position" name="position" placeholder="Job Title"><br>
+    
+                <input type="number" id="salary" name="salary" step="0.25" min="0" placeholder="Pay"><br>
+    
+                <select id="location" name="location">
+                    <option value selected disabled hidden>Location</option>
+                    <option value="In-Person">In-Person</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Remote">Remote</option>
+                </select><br>
+    
+                <input type="url" id="jobUrl" name="jobUrl" placeholder="URL"><br>
+    
+                <label for="dateSubmitted">Date Submitted</label>
+                <input type="date" id="dateSubmitted" name="dateSubmitted"><br>
+    
+                <div class="statusRadio">
+                    <label for="jobStatus">Status</label><br>
+                    <input type="radio" id="processing" name="jobStatus" value="Processing">
+                    <label for="processing">Processing</label>
+                    <input type="radio" id="interview" name="jobStatus" value="Interview">
+                    <label for="interview">Interview</label>
+                </div>
+                <br>
+    
+                <input type="text" id="extraInfo" name="extraInfo" placeholder="Additional Information"><br>
+    
+                <input type="submit" value="Save Changes">
+                <br>
+                <input type="reset" value="Clear">
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="removeAppForm">
+        <form action="http://localhost:5500/removeApplication" method="post">
+            <fieldset>
+                <h1>Remove Application</h1>
+                <select id="companyName" name="companyName" required>
+                    <option value selected disabled hidden>Company Name</option>
+                    <%- companiesLst %>
+                </select><br>
+                <input type="submit" value="Remove">
+                <br>
+                <input type="reset" value="Clear">
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="removeAllForm">
+        <form action="http://localhost:5500/removeAll" method="post">
+            <fieldset>
+                <h1>Remove All Applications</h1>
+                <input type="submit" value="Remove All">
+                <br>
+                <input type="reset" value="Clear">
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>
