@@ -778,8 +778,7 @@ body {
 #editAppForm > form > fieldset > input[type="reset"],
 #removeAppForm > form > fieldset > input[type="submit"],
 #removeAppForm > form > fieldset > input[type="reset"],
-#removeAllForm > form > fieldset > input[type="submit"],
-#removeAllForm > form > fieldset > input[type="reset"] {
+#removeAllForm > form > fieldset > input[type="submit"] {
     background-color: #5E548E;
     border: none;
     text-align: center;
@@ -798,8 +797,7 @@ body {
 #editAppForm > form > fieldset > input[type="reset"]:hover,
 #removeAppForm > form > fieldset > input[type="submit"]:hover,
 #removeAppForm > form > fieldset > input[type="reset"]:hover,
-#removeAllForm > form > fieldset > input[type="submit"]:hover,
-#removeAllForm > form > fieldset > input[type="reset"]:hover {
+#removeAllForm > form > fieldset > input[type="submit"]:hover {
     background-color: #9F86C0;
     color: #F7F7FF;
     
