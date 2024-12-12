@@ -63,7 +63,7 @@ app.get("/", async (request, response) => {
 app.get("/createAccount", (request, response) => {
     signedInStatus = false;
     username = "";
-
+    
     response.render("create_account");
 });
 
@@ -96,7 +96,7 @@ app.post("/createAccount", async (request, response) => {
 
         // Set login status to true
         signedInStatus = true;
-        username = username_create_acct;
+        username = "";
 
         response.render("index_in", { firstName, joke });
     }
@@ -614,7 +614,7 @@ process.stdout.write(prompt);
 process.stdin.on("readable", function () {
     const userInput = process.stdin.read();
 
-    if (userInput === "stop") {
+    if (userInput.trim() === "stop") {
         console.log("Shutting down the server");
         process.exit(0);
 
