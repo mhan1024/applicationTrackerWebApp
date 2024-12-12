@@ -614,7 +614,7 @@ process.stdout.write(prompt);
 process.stdin.on("readable", function () {
     const userInput = process.stdin.read();
 
-    if (userInput.trim() === "stop") {
+    if (userInput === "stop") {
         console.log("Shutting down the server");
         process.exit(0);
 
