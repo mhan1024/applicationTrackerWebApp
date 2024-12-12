@@ -41,7 +41,7 @@
     </header>
 
     <div id="addAppForm">
-        <form action="http://localhost:5500/addApplication" method="post">
+        <form action="/addApplication" method="post">
             <fieldset>
                 <h1>Add Application</h1>
                 <input type="text" id="companyName" name="companyName" placeholder="Company Name" required><br>
@@ -88,7 +88,7 @@
     </div>
 
     <div id="editAppForm">
-        <form action="http://localhost:5500/editApplication" method="post">
+        <form action="/editApplication" method="post">
             <fieldset>
                 <h1>Edit Application</h1>
     
@@ -139,7 +139,7 @@
     </div>
 
     <div id="removeAppForm">
-        <form action="http://localhost:5500/removeApplication" method="post">
+        <form action="/removeApplication" method="post">
             <fieldset>
                 <h1>Remove Application</h1>
                 <select id="companyName" name="companyName" required>
@@ -154,7 +154,7 @@
     </div>
 
     <div id="removeAllForm">
-        <form action="http://localhost:5500/removeAll" method="post">
+        <form action="/removeAll" method="post">
             <fieldset>
                 <h1>Remove All</h1>
                 <input type="submit" value="Remove All">
