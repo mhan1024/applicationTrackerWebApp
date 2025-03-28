@@ -1,4 +1,6 @@
-<h1>Overview</h1>
+<h1>AppTracker</h1>
+
+<h3>Overview</h3>
 Based on the Android app, Application Tracker, AppTracker is a web application that helps users keep track of job or internship applications. Users can provide some basic information about the company they just applied for and it will be added to a database (MongoDB). Users can view or modify the status of applications in the Display Application page. Additionally, users can display all of their applications or monitor them according to a specific filter. 
 
 <h3>Demo</h3>
